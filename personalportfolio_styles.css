@@ -1,0 +1,184 @@
+/* Base Reset and Layout */
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: Georgia, serif;
+  background-color: #fdfdfd;
+  line-height: 1.8;
+  color: #333;
+}
+
+header {
+  width: 100%;
+  background: linear-gradient(to right, peru, burlywood, plum); /* smoother flow */
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 12px 0; /* less vertical height */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle depth */
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+a:hover, a:visited:hover {
+  color: rebeccapurple;
+  font-weight: 800;
+}
+
+a:active {
+  color: whitesmoke;
+}
+
+/* Section Title */
+#title {
+  padding: 30px 0;
+  text-align: center;
+  font-size: 26px;
+  margin-top: 30px;
+  border-radius: 16px;
+}
+
+/* Interests Container */
+.interests {
+  column-count: 2;
+  column-gap: 60px;
+  padding: 60px 5%;
+}
+
+.interests > div {
+  break-inside: avoid;
+  margin: 0 auto 60px;
+}
+
+#running,
+#traveling,
+#community,
+#coding {
+  width: 100%;
+  max-width: 750px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#running {
+  background-color: rgba(255, 0, 0, 0.08);
+}
+
+#traveling {
+  background-color: rgba(158, 108, 1, 0.199)
+}
+
+#community {
+  background-color: rgba(144, 198, 255, 0.208);
+}
+
+#coding {
+  background-color:rgba(25, 10, 90, 0.237)
+}
+
+#traveling h4 {
+  margin-top: -10px;
+  font-size: 20px;
+  color: #444;
+  text-align: center;
+}
+
+h3 {
+  font-size: 28px;
+  text-align: center;
+}
+
+figure {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  justify-items: center;
+  align-items: center;
+}
+
+figure img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+  grid-column: span 2;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.canvas {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media screen and (max-width: 1100px) {
+  .interests {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+
+  #running,
+  #traveling,
+  #community,
+  #coding {
+    max-width: 100%;
+  }
+
+  figure img {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  figcaption {
+    font-size: 16px;
+  }
+}
