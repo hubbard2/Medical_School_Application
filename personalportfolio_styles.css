@@ -14,6 +14,70 @@ body {
   color: #333;
 }
 
+/* title  */ 
+/* Triangle Button */
+.triangle-toggle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-right: 60px solid transparent;
+  border-top: 60px solid peru;
+  z-index: 2000;
+  cursor: pointer;
+}
+
+/* Sliding Header Container */
+.slide-header {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  z-index: 1500;
+  transition: right 0.4s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Show the header when toggled */
+.slide-header.open {
+  right: 0;
+}
+
+/* Keep original header styling */
+header.title {
+  width: 100%;
+  background: linear-gradient(to right, peru, burlywood, plum);
+  text-align: center;
+  padding: 20px 0;
+}
+
+header.title h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header.title nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+header.title nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+header.title nav a:hover,
+header.title nav a:visited:hover {
+  color: rebeccapurple;
+  font-weight: 800;
+}
+
 header {
   width: 100%;
   background: linear-gradient(to right, peru, burlywood, plum); /* smoother flow */

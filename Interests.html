@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="personalportfolio_styles.css">
   </head>
   <body>
+   <div class="triangle-toggle" id="toggleHeader" aria-label="Open menu"></div>
+   <div class="slide-header" id="slideHeader">
     <header class="title">
-     <h1>Personal Portfolio Luke Hubbard</h1>
-     <nav>
-      <ul>
-        <li><a href="Personal_Statement.html">Personal Statement</a></li>
-        <li><a href="Research.html">Research</a></li>
-        <li><a href="Clinical_Hours.html">Clinical Hours</a></li>
-        <li><a href="Shadowing.html">Shadowing</a></li>
-        <li><a href="Volunteering.html">Volunteering</a></li>
-        <li><a href="Interests.html">Interests</a></li>
-      </ul>
-     </nav>
+      <h1>Personal Portfolio Luke Hubbard</h1>
+      <nav>
+        <ul>
+          <li><a href="Personal_Statement.html">Personal Statement</a></li>
+          <li><a href="Research.html">Research</a></li>
+          <li><a href="Clinical_Hours.html">Clinical Hours</a></li>
+          <li><a href="Shadowing.html">Shadowing</a></li>
+          <li><a href="Volunteering.html">Volunteering</a></li>
+          <li><a href="Interests.html">Interests</a></li>
+        </ul>
+      </nav>
+    </div>
     </header>
     <main>
     <div class="interests-wrapper">
@@ -83,5 +86,15 @@
       </div>
     </div>
     </main>
+
+   <script>
+    const toggle = document.getElementById("toggleHeader");
+    const header = document.getElementById("slideHeader");
+
+    toggle.addEventListener("click", () => {
+    header.classList.toggle("open");
+    });
+   </script>
+
   </body>
 </html>
