@@ -2,26 +2,96 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
     <title>Home</title>
     <link rel="stylesheet" href="personalportfolio_styles.css">
   </head>
   <body>
+   <div class="triangle-toggle" id="toggleHeader" aria-label="Open menu"></div>
+   <div class="slide-header" id="slideHeader">
     <header class="title">
-     <h1>Personal Portfolio Luke Hubbard</h1>
-     <nav>
-      <ul>
-        <li><a href="Personal_Statement.html">Personal Statement</a></li>
-        <li><a href="Research.html">Research</a></li>
-        <li><a href="Clinical_Hours.html">Clinical Hours</a></li>
-        <li><a href="Shadowing.html">Shadowing</a></li>
-        <li><a href="Volunteering.html">Volunteering</a></li>
-        <li><a href="Interests.html">Interests</a></li>
-      </ul>
-     </nav>
+      <h1>Personal Portfolio Luke Hubbard</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Personal Statement</a></li>
+          <li><a href="Research.html">Research</a></li>
+          <li><a href="Clinical_Hours.html">Clinical Hours</a></li>
+          <li><a href="Shadowing.html">Shadowing</a></li>
+          <li><a href="Volunteering.html">Volunteering</a></li>
+          <li><a href="Interests.html">Interests</a></li>
+        </ul>
+      </nav>
     </header>
-    <main>
+   </div>
+  <div class="information">
+   <main>
+     <div class="section_title"> 
+      <h2>Why do I want to go to Medical School?</h2>
+     </div>
+     <div class="content"> 
+      <img src="Photos/Headshot_Photo.jpg" alt="Headshot" class="headshot" />
+      <p class="first-paragraph">My grandpa died from prostate cancer. My uncle died from alcoholism. My other grandpa lived with Alzheimer’s for years, unable to recognize who I was. Unfortunately, these are common human experiences, but for me, they sparked a deep conviction to help others both emotionally and tangibly. I want to become a physician because it offers the rare chance to earn a living while fully committing each hour in each day to the goals that drive me: continuous learning about innovative medicine and making a difference through encouraging preventative healthcare.</p>
 
+<p>I believe in addressing major diseases long before they appear. With the right care, and by treating the person as a whole, based on their environment, genetic makeup, and personality, alcoholism can be preventable, and both cancer and neurodegenerative diseases can be significantly delayed. However, in the broader world, especially in rural areas like mine, preventative care is rarely prioritized. I want to help change that and be part of a movement that shifts American culture to value proactive medicine as much as reactive treatment.</p>
+
+<p>Acting on that belief, I created a community health initiative in South Bend for middle-aged individuals who were overweight, unfamiliar with resistance training, or simply inactive. Many reminded me of my own parents: hardworking, caring, but unable to keep up with the new findings about how to stay in good health, especially as the years pass. The idea first came to me when I was looking for a way to volunteer and remembered helping my mom with resistance training. She told me she had never lifted weights, didn’t know how to start, and was scared to go into the gym. That stuck with me. I want to help people take charge of their health because I've seen how much better life can be when they do.</p> 
+
+<p>Before I decided to apply my skills practically, I was studying for the MCAT. It was challenging, but it forced me to grow. Somewhere along the way, something clicked. I started to realize how seamlessly science connects: physics explains the forces that shape matter, chemistry reveals how that matter interacts, biology shows how those interactions give rise to life, and psychology explores how that life thinks, feels, and acts. Through constantly tackling hard concepts and learning from failures, I became more self-directed, more motivated, and more certain about pursuing medicine because I could finally envision a lifetime of meaningful work in it. </p>
+
+<p>What draws me into medicine is the human connection and problem-solving. Whether I was helping on a Red Cross disaster call or shadowing in the ER, I saw how much it matters to be present during someone’s worst moments, like when I sat beside a woman in ash-covered clothes, helping her plan her next steps after she lost everything. I also loved understanding the science underneath it all, as it made me feel more equipped to help, but figuring out how I wanted to apply it was the next step.</p>
+
+<p>I plan to keep encouraging preventative care throughout my life, but I want to dedicate myself to a field like internal or family medicine. I like that these specialties let you build long-term relationships while still dealing with complex medical problems. This type of medicine would allow me to focus on what matters most: individual health, lifelong learning, and impacting other humans in a positive way. I’ll have the chance to explore a wide range of diseases and different medical conditions while also working to confront the deeper issues of lifestyle, like neglect and misinformation, that often stand in the way of better care.</p>
+
+<p>My mindset of asking questions and looking deeper also led me to research. I started out studying how psychological factors predict Alzheimer’s, which was especially meaningful because of my grandpa. More recently, I focused on catheter-associated urinary tract infections to build up my wet lab skills while learning how to prevent one of the most common hospital-acquired infections. Alongside that, I started teaching myself how to code. I wanted to better understand how technology like AI could improve diagnosis and preventative care. I plan to keep building on this foundation in my last year of college and into medical school, so I can design evidence-based solutions and apply them to real patients.</p>
+
+<p>At the same time, I’m drawn to the other side of medicine: the crisis, the complexity, the urgency. I find it exciting to learn how biofilms form in the body, how plaques disrupt functions in the brain, or how cardiovascular issues grow quietly until they reach a crisis point. I want to be the kind of doctor who can think fast, act decisively, and still stay grounded in empathy. And I want my research to lead to better tools, faster diagnoses, and smarter care when people need it most.</p>
+
+<p>Medicine integrates my core values and aspirations: the service, the curiosity, and the responsibility to act. Whether treating patients, running a study, or building something new, I want to make a practical difference in healthcare. Families like mine, which are rural, close-knit, and resilient, deserve care that is both excellent and equitable. I’m ready to dedicate my life to making that possible.</p>
+
+    </div>
     </main>
+    </div>
+
+    <script>
+    const toggle = document.getElementById("toggleHeader");
+    const header = document.getElementById("slideHeader");
+
+    toggle.addEventListener("click", () => {
+    header.classList.toggle("open");
+    });
+   </script>
+   
+<!-- Preloading Images -->
+<script>
+  const imagePaths = [
+    // West Section
+    "Interest_Photos/West/Narrows.jpg",
+    "Interest_Photos/West/Bryce_Canyon.JPEG",
+    "Interest_Photos/West/Above_Angels_Landing.jpg",
+    "Interest_Photos/West/Below_Angels_Landing.jpg",
+
+    // Trips Section
+    "Interest_Photos/Fishing_In_Arkansas.jpg",
+    "Interest_Photos/Grand_Canyon.JPG",
+    "Interest_Photos/Snowboarding_In_Wisconsin.JPG",
+    "Interest_Photos/Scuba_Diving.jpg",
+
+    // Community Section
+    "Interest_Photos/Dunne_Watching_NCAA_Championship.jpg",
+    "Interest_Photos/Dunne_Weekend.JPG",
+
+    // Running Section
+    "Interest_Photos/Morning_Of_Chicago_Marathon.JPEG",
+    "Interest_Photos/After_Chicago_Marathon.JPEG",
+    "Interest_Photos/With_Charlie_After_Chicago_Marathon.JPEG",
+    "Interest_Photos/Holy_Half.jpeg"
+  ];
+
+  imagePaths.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+</script>
+
   </body>
 </html>

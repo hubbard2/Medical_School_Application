@@ -7,21 +7,57 @@
     <link rel="stylesheet" href="personalportfolio_styles.css">
   </head>
   <body>
+   <div class="triangle-toggle" id="toggleHeader" aria-label="Open menu"></div>
+   <div class="slide-header" id="slideHeader">
     <header class="title">
-     <h1>Personal Portfolio Luke Hubbard</h1>
-     <nav>
-      <ul>
-        <li><a href="Personal_Statement.html">Personal Statement</a></li>
-        <li><a href="Research.html">Research</a></li>
-        <li><a href="Clinical_Hours.html">Clinical Hours</a></li>
-        <li><a href="Shadowing.html">Shadowing</a></li>
-        <li><a href="Volunteering.html">Volunteering</a></li>
-        <li><a href="Interests.html">Interests</a></li>
-      </ul>
-     </nav>
+      <h1>Personal Portfolio Luke Hubbard</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Personal Statement</a></li>
+          <li><a href="Research.html">Research</a></li>
+          <li><a href="Clinical_Hours.html">Clinical Hours</a></li>
+          <li><a href="Shadowing.html">Shadowing</a></li>
+          <li><a href="Volunteering.html">Volunteering</a></li>
+          <li><a href="Interests.html">Interests</a></li>
+        </ul>
+      </nav>
+    </div>
     </header>
-    <main>
-     <h2></h2>
+    <main class="canvas">
+      <section class="section_title">
+        <h2>Shadowing</h2>
+      </section>
+
+      <div class="grid">
+        <div id="DMH">
+          <h3>Decatur Memorial Hospital Certified Nurse Anesthetist</h3>
+          <p> I shadowed Marci Baumann, a CRNA at Memorial Health. It was my first time in scrubs and in an operating room. I observed a podiatric
+ surgery and was surprised by the physical force involved. Mrs. Baumann walked me through several ORs, where I observed anesthesia
+ induction and pre-op routines. I spoke with a medical device rep about supporting surgeons. One anesthesiologist told me I would “hate
+ my life” if I went into medicine. Instead of discouraging me, it made me reflect. I realized I would need to truly love this path to commit to
+ it. The experience sparked my interest in surgery and showed me the trust and teamwork that clinical care requires.</p>
+        </div>
+
+        <div id="SIU">
+          <h3>Southern Illinois University Emergency Department</h3>
+          <p> I shadowed four emergency medicine physicians at Southern Illinois University for 20 hours, gaining exposure to a wide range of acute
+ medical conditions. I observed CTs, ultrasounds, and clinical assessments for patients with pneumonia, pericardial effusion, intoxication,
+ and abdominal pain. I learned about respiratory interventions, the clinical differences between STEMI and NSTEMI, and the diagnostic
+ process in fast-paced emergency settings. I observed the value of empathy and humor in patient care and began to understand the
+ emotional resilience required of emergency physicians. This experience sparked a deep interest in the field and gave me a broader
+ understanding of frontline medicine.</p>
+        </div>
+      </div>
     </main>
+    
+    <script>
+    const toggle = document.getElementById("toggleHeader");
+    const header = document.getElementById("slideHeader");
+
+    toggle.addEventListener("click", () => {
+    header.classList.toggle("open");
+    });
+   </script>
+
   </body>
 </html>

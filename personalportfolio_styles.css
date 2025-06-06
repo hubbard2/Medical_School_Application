@@ -1,6 +1,11 @@
 /* Base Reset and Layout */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
 * {
-  scroll-behavior: smooth;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,7 +19,6 @@ body {
   color: #333;
 }
 
-/* title  */ 
 /* Triangle Button */
 .triangle-toggle {
   position: fixed;
@@ -23,7 +27,7 @@ body {
   width: 0;
   height: 0;
   border-right: 60px solid transparent;
-  border-top: 60px solid peru;
+  border-top: 60px solid rgb(167, 92, 17);
   z-index: 2000;
   cursor: pointer;
 }
@@ -45,11 +49,16 @@ body {
 }
 
 /* Keep original header styling */
-header.title {
+header {
   width: 100%;
-  background: linear-gradient(to right, peru, burlywood, plum);
+  background: linear-gradient(to right, peru, burlywood, plum); /* smoother flow */
   text-align: center;
-  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 12px 0; /* less vertical height */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle depth */
+  overflow: hidden;
 }
 
 header.title h1 {
@@ -78,48 +87,13 @@ header.title nav a:visited:hover {
   font-weight: 800;
 }
 
-header {
-  width: 100%;
-  background: linear-gradient(to right, peru, burlywood, plum); /* smoother flow */
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  padding: 12px 0; /* less vertical height */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle depth */
-}
-
-h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  list-style: none;
-  gap: 30px;
-  margin-top: 10px;
-}
-
-nav a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-}
-
-a:hover, a:visited:hover {
-  color: rebeccapurple;
-  font-weight: 800;
-}
 
 a:active {
   color: whitesmoke;
 }
 
 /* Section Title */
-#title {
+.section_title {
   padding: 30px 0;
   text-align: center;
   font-size: 26px;
@@ -128,13 +102,13 @@ a:active {
 }
 
 /* Interests Container */
-.interests {
+.grid {
   column-count: 2;
   column-gap: 60px;
   padding: 60px 5%;
 }
 
-.interests > div {
+.grid > div {
   break-inside: avoid;
   margin: 0 auto 60px;
 }
@@ -145,17 +119,16 @@ a:active {
 #coding {
   width: 100%;
   max-width: 750px;
-  background-color: white;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  display: flex;
+  display: grid;
   flex-direction: column;
   gap: 30px;
 }
 
 #running {
-  background-color: rgba(255, 0, 0, 0.08);
+  background-color: rgba(255, 100, 0, 0.12);
 }
 
 #traveling {
@@ -167,13 +140,18 @@ a:active {
 }
 
 #coding {
-  background-color:rgba(25, 10, 90, 0.237)
+  background-color:rgba(142, 69, 133, 0.199);
 }
 
 #traveling h4 {
   margin-top: -10px;
   font-size: 20px;
   color: #444;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px; 
   text-align: center;
 }
 
@@ -214,6 +192,137 @@ figcaption {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+/* Home Screen and Personal Statement */
+
+.information {
+  display: flex;
+  align-items: flex-start;
+  width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+.content {
+  font-weight: 500;
+  text-align: justify;
+}
+
+.content p {
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+.headshot {
+  width: 325px;
+  height: 380px;
+  background-color: red;
+  float: left;
+  margin: 0 10px 0 0;
+  object-fit: cover;
+}
+
+.first-paragraph::first-letter {
+  font-size: 2rem;
+  color: plum;
+  float: left;
+  margin-right: 1rem;
+}
+
+/* Clinical Hours */
+
+#DAT, #Patient_Transport, #Pharmacy_Technician {
+  width: 100%;
+  max-width: 750px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: grid;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#DAT {
+  background-color: rgba(255, 100, 0, 0.12);
+}
+#Patient_Transport {
+  background-color: rgba(100, 255, 0, 0.12);
+}
+#Pharmacy_Technician {
+  background-color:rgba(142, 69, 133, 0.199);
+}
+
+/* Research */
+
+#BD_Research_Assistant, #ADA_Research_Assistant, #CAUTI_Research_Assistant {
+  width: 100%;
+  max-width: 750px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: grid;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#BD_Research_Assistant{
+  background-color: rgba(147, 169, 255, 0.12);
+}
+
+#ADA_Research_Assistant{
+  background-color: rgba(141, 57, 57, 0.12);
+}
+
+#CAUTI_Research_Assistant{
+  background-color: rgba(246, 246, 103, 0.12);
+}
+
+/* Shadowing */
+
+#SIU, #DMH {
+  width: 100%;
+  max-width: 750px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: grid;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#SIU{
+  background-color: rgba(147, 169, 255, 0.12);
+}
+
+#DMH{
+  background-color: rgba(141, 57, 57, 0.12);
+}
+
+/* Volunteering */
+
+#Red_Cross, #Andre_House, #SB_Community_Initiative {
+  width: 100%;
+  max-width: 750px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: grid;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#Red_Cross {
+  background-color: rgba(147, 169, 255, 0.12);
+}
+
+#Andre_House {
+  background-color: rgba(141, 57, 57, 0.12);
+}
+
+#SB_Community_Initiative {
+  background-color: rgba(141, 57, 180, 0.12);
+
 }
 
 @media screen and (max-width: 1100px) {

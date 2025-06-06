@@ -3,25 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Home</title>
+    <title>Clinical Hours</title>
     <link rel="stylesheet" href="personalportfolio_styles.css">
   </head>
   <body>
-    <header class="title">
-     <h1>Personal Portfolio Luke Hubbard</h1>
-     <nav>
-      <ul>
-        <li><a href="Personal_Statement.html">Personal Statement</a></li>
-        <li><a href="Research.html">Research</a></li>
-        <li><a href="Clinical_Hours.html">Clinical Hours</a></li>
-        <li><a href="Shadowing.html">Shadowing</a></li>
-        <li><a href="Volunteering.html">Volunteering</a></li>
-        <li><a href="Interests.html">Interests</a></li>
-      </ul>
-     </nav>
-    </header>
-    <main>
+    <div class="triangle-toggle" id="toggleHeader" aria-label="Open menu"></div>
+    <div class="slide-header" id="slideHeader">
+      <header class="title">
+        <h1>Personal Portfolio Luke Hubbard</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Personal Statement</a></li>
+            <li><a href="Research.html">Research</a></li>
+            <li><a href="Clinical_Hours.html">Clinical Hours</a></li>
+            <li><a href="Shadowing.html">Shadowing</a></li>
+            <li><a href="Volunteering.html">Volunteering</a></li>
+            <li><a href="Interests.html">Interests</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
 
+    <main class="canvas">
+      <section class="section_title">
+        <h2>Clinical Experience</h2>
+      </section>
+
+      <div class="grid">
+        <div id="DAT">
+          <h3>DAT Specialist - Red Cross</h3>
+          <p> I responded to local disasters, including house fires, providing immediate assistance through the Red Cross Disaster Action Team (DAT).
+ This included conducting client interviews to assess urgent needs, offering financial assistance for food and shelter, and providing
+ emotional support. I coordinated closely with team members and emergency services to ensure the timely delivery of Red Cross
+ resources. In addition to active responses, I maintained regular on-call availability, completed disaster response training, and stayed
+ engaged with the broader DAT community. On-call shifts required me to be ready to respond at any moment, sometimes during nights
+ and weekends. (**31 active duty hours**)</p>
+        </div>
+
+        <div id="Patient_Transport">
+          <h3>Patient Transport Aide - Memorial Hospital</h3>
+          <p>As a patient transport aide, I safely moved patients to and from diagnostic tests, surgeries, and discharge. I developed strong
+ communication skills through regular interaction with patients, nurses, and techs, and learned to remain calm under pressure. I cleaned
+ and maintained equipment, responded to urgent calls, and quickly learned hospital logistics, even after getting lost my first week. This
+ role gave me firsthand insight into hospital flow, patient vulnerability, and the teamwork essential to healthcare. I saw the difference
+ kindness makes, even in brief interactions, and it solidified my desire to work in patient-centered medicine.</p>
+        </div>
+
+        <div id="Pharmacy_Technician">
+          <h3>Pharmacy Technician - Extended Living LLC</h3>
+          <p> I operated and maintained pharmaceutical dispensary machines in a non-retail compounding pharmacy. I assisted pharmacists with daily
+ workflow, including medication preparation and inventory organization. I learned to recognize and understand the use of many drug
+ names through hands-on experience and mentorship from pharmacists. I gained exposure to pharmaceutical operations and supply chain
+ management by traveling with the owner to regional pharmacies, where I observed logistics, equipment setup, and inter-site coordination.
+ This experience deepened my understanding of pharmacy operations and the business behind clinical care.</p>
+        </div>
+      </div>
     </main>
+
+    <script>
+      const toggle = document.getElementById("toggleHeader");
+      const header = document.getElementById("slideHeader");
+
+      toggle.addEventListener("click", () => {
+        header.classList.toggle("open");
+      });
+    </script>
   </body>
 </html>

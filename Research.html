@@ -7,21 +7,67 @@
     <link rel="stylesheet" href="personalportfolio_styles.css">
   </head>
   <body>
+   <div class="triangle-toggle" id="toggleHeader" aria-label="Open menu"></div>
+   <div class="slide-header" id="slideHeader">
     <header class="title">
-     <h1>Personal Portfolio Luke Hubbard</h1>
-     <nav>
-      <ul>
-        <li><a href="Personal_Statement.html">Personal Statement</a></li>
-        <li><a href="Research.html">Research</a></li>
-        <li><a href="Clinical_Hours.html">Clinical Hours</a></li>
-        <li><a href="Shadowing.html">Shadowing</a></li>
-        <li><a href="Volunteering.html">Volunteering</a></li>
-        <li><a href="Interests.html">Interests</a></li>
-      </ul>
-     </nav>
+      <h1>Personal Portfolio Luke Hubbard</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Personal Statement</a></li>
+          <li><a href="Research.html">Research</a></li>
+          <li><a href="Clinical_Hours.html">Clinical Hours</a></li>
+          <li><a href="Shadowing.html">Shadowing</a></li>
+          <li><a href="Volunteering.html">Volunteering</a></li>
+          <li><a href="Interests.html">Interests</a></li>
+        </ul>
+      </nav>
+    </div>
     </header>
-    <main>
+   <main class="canvas">
+      <section class="section_title">
+        <h2>Research</h2>
+      </section>
 
+      <div class="grid">
+        <div id="BD_Research_Assistant">
+          <h3>Big Data Methodology Research Assistant</h3>
+          <p>I worked in a psychology research lab studying the relationship between stress and cognition. I conducted participant stress trials,
+ performed literature reviews, and contributed to a research proposal on the Dunning-Kruger effect. Although the proposal was not
+ submitted due to timing issues, the experience sharpened my scientific writing and critical thinking. I also evaluated diagnostic AI
+ responses for quality control, provided emotional input to support algorithm training, and extracted transcript data from online courses for
+ machine learning applications. Through this work, I gained practical experience in research design, behavioral data analysis, and
+ statistical methods.</p>
+        </div>
+
+        <div id="ADA_Research_Assistant">
+          <h3>Adult Development and Aging Research Assistant</h3>
+          <p>I assisted in research on stress, aging, and executive function. I guided participants, taught them to use data collection devices, coded
+ data, and conducted literature reviews. I worked from the beginning on a project linking stress and cognition, contributing as an author on
+ a paper expected to be submitted this summer. I also helped start another paper examining executive function and Alzheimer’s using the
+ Go/No-Go task, which I presented. This experience sparked my passion for human-subjects research and inspired me to pursue research
+ as a physician.</p>
+        </div>
+
+        <div id="CAUTI_Research_Assistant">
+          <h3>Ana Flores-Mireles Lab</h3>
+          <p> I gained hands-on experience in a wet lab focused on protein isolation and immunology. I learned pipetting, RNA extraction, urine
+ filtration, autoclave use, preparing BHI media, and analyzing stains through immunohistochemistry. I reviewed research posters to better
+ understand experimental design and findings. I prepared media under sterile conditions using ethanol and solution calculations. I
+ dissected mouse legs to isolate femurs and tibias for immune cell extraction. This experience deepened my interest in lab-based science
+ and built my confidence in a biosafety hood with live tissue. I plan to carry these technical and analytical skills into my future as a
+ physician.</p>
+        </div>
+      </div>
     </main>
+
+    <script>
+    const toggle = document.getElementById("toggleHeader");
+    const header = document.getElementById("slideHeader");
+
+    toggle.addEventListener("click", () => {
+    header.classList.toggle("open");
+    });
+   </script>
+
   </body>
 </html>

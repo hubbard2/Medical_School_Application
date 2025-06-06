@@ -7,21 +7,65 @@
     <link rel="stylesheet" href="personalportfolio_styles.css">
   </head>
   <body>
+   <div class="triangle-toggle" id="toggleHeader" aria-label="Open menu"></div>
+   <div class="slide-header" id="slideHeader">
     <header class="title">
-     <h1>Personal Portfolio Luke Hubbard</h1>
-     <nav>
-      <ul>
-        <li><a href="Personal_Statement.html">Personal Statement</a></li>
-        <li><a href="Research.html">Research</a></li>
-        <li><a href="Clinical_Hours.html">Clinical Hours</a></li>
-        <li><a href="Shadowing.html">Shadowing</a></li>
-        <li><a href="Volunteering.html">Volunteering</a></li>
-        <li><a href="Interests.html">Interests</a></li>
-      </ul>
-     </nav>
+      <h1>Personal Portfolio Luke Hubbard</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Personal Statement</a></li>
+          <li><a href="Research.html">Research</a></li>
+          <li><a href="Clinical_Hours.html">Clinical Hours</a></li>
+          <li><a href="Shadowing.html">Shadowing</a></li>
+          <li><a href="Volunteering.html">Volunteering</a></li>
+          <li><a href="Interests.html">Interests</a></li>
+        </ul>
+      </nav>
+    </div>
     </header>
-    <main>
+    <main class="canvas">
+      <section class="section_title">
+        <h2>Volunteering</h2>
+      </section>
 
+      <div class="grid">
+        <div id="Red_Cross">
+          <h3>President of Notre Dame Red Cross Club</h3>
+          <p> I led and coordinated all Red Cross Club activities (2024–2025), including organizing blood drives, recruiting volunteers, and collaborating
+ with campus and community partners. I served as site lead for the Back the Bend campaign, where we installed over 100 smoke alarms
+ in vulnerable South Bend homes alongside the fire department. I also educated residents on fire safety and mentored new volunteers
+ during installations. I ran in the 2024 Chicago Marathon and raised $1,250 for the Red Cross. Through direct service and leadership, I
+ gained a deep understanding of the Red Cross's mission and the life-saving value of community preparedness.</p>
+        </div>
+
+        <div id="Andre_House">
+          <h3>Service Trip to Andre House in Phoneix, AZ</h3>
+          <p> I volunteered at Andre House, a Catholic nonprofit serving people experiencing homelessness. Before the trip, I attended three hours of
+ training on homelessness and the mission of service. I helped prepare and serve ~600 meals per night, distributed hygiene and clothing
+ items, organized showers and assisted guests with specific needs, such as finding particular food items, supporting job applications, or
+ simply listening. I also completed special projects like surveying guests, organizing donations, cleaning solar panels, and leading a prayer
+ service for unclaimed bodies. The experience deepened my understanding of systemic poverty and the dignity of direct service.</p>
+        </div>
+
+        <div id="SB_Community_Initiative">
+          <h3>South Bend Community Initiative Project</h3>
+          <p>I created a free fitness program to offer accessible health support to community members who couldn’t afford personal training or didn’t
+ know where to start. I wanted to share what I knew about health while learning more about the barriers that keep people from exercising. I
+ posted on Nextdoor and was shocked by the response—over 5,000 views, 100 likes, and 60+ comments. I took on three clients (limited
+ by time), each of whom donated $100 to a charity, and we met weekly at Planet Fitness for resistance training. I also messaged those I
+ couldn’t take on to encourage healthy habits and provide support where I could</p>
+        </div>
+      </div>
     </main>
+
+    <script>
+    const toggle = document.getElementById("toggleHeader");
+    const header = document.getElementById("slideHeader");
+
+    toggle.addEventListener("click", () => {
+    header.classList.toggle("open");
+    });
+   </script>
+
   </body>
 </html>
