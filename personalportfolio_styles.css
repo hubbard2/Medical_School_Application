@@ -116,7 +116,16 @@ a:active {
 #running,
 #traveling,
 #community,
-#coding {
+#coding,
+#DAT,
+#Patient_Transport,
+#Pharmacy_Technician,
+#BD_Research_Assistant,
+#ADA_Research_Assistant,
+#CAUTI_Research_Assistant,
+#Red_Cross, 
+#Andre_House,
+#SB_Community_Initiative {
   width: 100%;
   max-width: 750px;
   padding: 40px;
@@ -232,17 +241,6 @@ figcaption {
 
 /* Clinical Hours */
 
-#DAT, #Patient_Transport, #Pharmacy_Technician {
-  width: 100%;
-  max-width: 750px;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  display: grid;
-  flex-direction: column;
-  gap: 30px;
-}
-
 #DAT {
   background-color: rgba(255, 100, 0, 0.12);
 }
@@ -254,17 +252,6 @@ figcaption {
 }
 
 /* Research */
-
-#BD_Research_Assistant, #ADA_Research_Assistant, #CAUTI_Research_Assistant {
-  width: 100%;
-  max-width: 750px;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  display: grid;
-  flex-direction: column;
-  gap: 30px;
-}
 
 #BD_Research_Assistant{
   background-color: rgba(147, 169, 255, 0.12);
@@ -280,17 +267,6 @@ figcaption {
 
 /* Shadowing */
 
-#SIU, #DMH {
-  width: 100%;
-  max-width: 750px;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  display: grid;
-  flex-direction: column;
-  gap: 30px;
-}
-
 #SIU{
   background-color: rgba(147, 169, 255, 0.12);
 }
@@ -300,17 +276,6 @@ figcaption {
 }
 
 /* Volunteering */
-
-#Red_Cross, #Andre_House, #SB_Community_Initiative {
-  width: 100%;
-  max-width: 750px;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  display: grid;
-  flex-direction: column;
-  gap: 30px;
-}
 
 #Red_Cross {
   background-color: rgba(147, 169, 255, 0.12);
@@ -324,6 +289,9 @@ figcaption {
   background-color: rgba(141, 57, 180, 0.12);
 
 }
+
+
+
 
 @media screen and (max-width: 1100px) {
   .interests {
